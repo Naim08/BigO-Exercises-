@@ -18,7 +18,7 @@ def my_min(arr)
   return min
 end
 
-p my_min([0,3,5,4, -5, 10, 1, 90])
+#p my_min([0,3,5,4, -5, 10, 1, 90])
 
 # def sub_sum(arr)
 #   subs = []
@@ -55,6 +55,7 @@ def sub_sum(arr)
 
       p curr_sum
       if curr_sum < 0
+        # p curr_sum
         curr_sum = 0
       end
     end
@@ -62,6 +63,6 @@ def sub_sum(arr)
 end
 
 
-p sub_sum([2, 3, -6, 7, -6, 7])
+p sub_sum([2, 3, -6, 7, -6, 7,-9,10])
 
 
