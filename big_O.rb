@@ -18,7 +18,7 @@ def my_min(arr)
   return min
 end
 
-p my_min([0,3,5,4, -5, 10, 1, 90])
+#p my_min([0,3,5,4, -5, 10, 1, 90])
 
 # def sub_sum(arr)
 #   subs = []
@@ -47,20 +47,21 @@ p my_min([0,3,5,4, -5, 10, 1, 90])
 def sub_sum(arr)
   max_sum = arr[0]
   curr_sum = 0
-  arr.each do |ele|
-    curr_sum += ele
-    if curr_sum > max_sum
-      max_sum = curr_sum
+    arr.each do |ele|
+      curr_sum += ele
+      if curr_sum > max_sum
+        max_sum = curr_sum
+      end
+
+      p curr_sum
+      if curr_sum < 0
+        curr_sum = 0
+      end
     end
-    
-    if curr_sum < 0
-      curr_sum = 0
-    end
-  end
-  max_sum
+    max_sum
 end
 
 
-p sub_sum([2, 3, -6, 7, -6, 7])
+p sub_sum([2, 3, -6, 7, -6, 7,-9,10])
 
 
