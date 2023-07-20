@@ -45,19 +45,19 @@ end
 #
 
 def sub_sum(arr)
-  max_sum = arr[0]
-  curr_sum = 0
+    max_sum = arr[0]
+    curr_sum = 0
     arr.each do |ele|
-      curr_sum += ele
-      if curr_sum > max_sum
+        curr_sum += ele
+        if curr_sum > max_sum
         max_sum = curr_sum
-      end
+        end
 
-      p curr_sum
-      if curr_sum < 0
+        p curr_sum
+        if curr_sum < 0
         # p curr_sum
         curr_sum = 0
-      end
+        end
     end
     max_sum
 end
