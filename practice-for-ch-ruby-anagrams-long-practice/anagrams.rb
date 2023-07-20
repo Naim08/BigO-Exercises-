@@ -25,13 +25,29 @@
 # end
 
 def first_anagram?(str_1, str_2)
-  return false if str_1.length != str_2.length 
+  return false if str_1.length != str_2.length
   letters = str_1.split("")
   anagrams = letters.permutation(letters.length).to_a
-  
+
   anagrams.any? {|ele| ele.join("") == str_2 }
 end
 
 
 
-p first_anagram?("abc", "cba")
+# p first_anagram?("abc", "cba")
+
+def second_anagram?(str_1, str_2)
+  str_2 = str_2.split("")
+  str_1.each_char do |char|
+    str_2.delete_at(str_2.index(char))
+  end
+
+  str_2.empty?
+end
+# p second_anagram?("abc", "cba")
+
+def third_anagram?(str_1, str_2)
+  str_1.split("").sort == str_2.split("").sort
+end
+
+p third_anagram?("abc", "bca")
