@@ -51,3 +51,25 @@ def third_anagram?(str_1, str_2)
 end
 
 p third_anagram?("abc", "bca")
+
+
+def fourth_anagram?(str_1, str_2)
+
+  hash_1 = {}
+  hash_2 = {}
+
+  str_1.each_char do |char|
+    hash_1[char] ||= 0
+    hash_1[char] += 1
+  end
+
+  str_2.each_char do |character|
+    hash_2[character] ||= 0
+    hash_2[character] += 1
+  end
+
+  hash_1 == hash_2
+
+end
+
+p fourth_anagram?("abc", "cba")
