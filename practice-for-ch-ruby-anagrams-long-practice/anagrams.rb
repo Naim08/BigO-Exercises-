@@ -73,3 +73,21 @@ def fourth_anagram?(str_1, str_2)
 end
 
 p fourth_anagram?("abc", "cba")
+
+# Use two arrs of size 26 to store each characters frequency, then compare the arrs to see if they are equal.
+def fifth_anagram?(str_1, str_2)
+  arr_1 = Array.new(26, 0)
+  arr_2 = Array.new(26, 0)
+
+  str_1.each_char do |char|
+    arr_1[char.ord - "a".ord] += 1
+  end
+
+  str_2.each_char do |char|
+    arr_2[char.ord - "a".ord] += 1
+  end
+
+  arr_1 == arr_2
+end
+
+p fifth_anagram?("abcdef", "defcba")
